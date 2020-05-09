@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05984DDE940C75CC71BC87CC /* Pods_Tilt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E04582EFB0997231AB4A85 /* Pods_Tilt.framework */; };
 		0980D3A32465CF0F00DEA667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980D3A22465CF0F00DEA667 /* AppDelegate.swift */; };
 		0980D3A52465CF0F00DEA667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980D3A42465CF0F00DEA667 /* SceneDelegate.swift */; };
 		0980D3A72465CF0F00DEA667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0980D3A62465CF0F00DEA667 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		0980D3AB2465CF1300DEA667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0980D3AE2465CF1300DEA667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0980D3B02465CF1300DEA667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E04582EFB0997231AB4A85 /* Pods_Tilt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tilt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F4D5573B25DCF8644AD6D6 /* Pods-Tilt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tilt.debug.xcconfig"; path = "Target Support Files/Pods-Tilt/Pods-Tilt.debug.xcconfig"; sourceTree = "<group>"; };
+		86B52E190042E662EAADB9D6 /* Pods-Tilt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tilt.release.xcconfig"; path = "Target Support Files/Pods-Tilt/Pods-Tilt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05984DDE940C75CC71BC87CC /* Pods_Tilt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0980D3A12465CF0F00DEA667 /* Tilt */,
 				0980D3A02465CF0F00DEA667 /* Products */,
+				4BACDBEF7D403A963744B460 /* Pods */,
+				76A0316C76950826CF060931 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Tilt;
 			sourceTree = "<group>";
 		};
+		4BACDBEF7D403A963744B460 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48F4D5573B25DCF8644AD6D6 /* Pods-Tilt.debug.xcconfig */,
+				86B52E190042E662EAADB9D6 /* Pods-Tilt.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		76A0316C76950826CF060931 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46E04582EFB0997231AB4A85 /* Pods_Tilt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0980D3B32465CF1300DEA667 /* Build configuration list for PBXNativeTarget "Tilt" */;
 			buildPhases = (
+				61D986A828BCBE36805AE212 /* [CP] Check Pods Manifest.lock */,
 				0980D39B2465CF0F00DEA667 /* Sources */,
 				0980D39C2465CF0F00DEA667 /* Frameworks */,
 				0980D39D2465CF0F00DEA667 /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61D986A828BCBE36805AE212 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tilt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0980D39B2465CF0F00DEA667 /* Sources */ = {
@@ -282,8 +332,10 @@
 		};
 		0980D3B42465CF1300DEA667 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48F4D5573B25DCF8644AD6D6 /* Pods-Tilt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S69EHXYN33;
 				INFOPLIST_FILE = Tilt/Info.plist;
@@ -293,6 +345,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mkimhj.Tilt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,8 +353,10 @@
 		};
 		0980D3B52465CF1300DEA667 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86B52E190042E662EAADB9D6 /* Pods-Tilt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S69EHXYN33;
 				INFOPLIST_FILE = Tilt/Info.plist;
@@ -311,6 +366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mkimhj.Tilt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
